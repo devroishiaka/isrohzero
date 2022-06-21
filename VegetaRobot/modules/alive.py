@@ -11,7 +11,7 @@ from telethon import __version__ as telever
 from VegetaRobot import dispatcher, SUPPORT_CHAT, UPDATES_CHANNEL
 from VegetaRobot.modules.disable import DisableAbleCommandHandler
 
-INFO_IMG = "https://telegra.ph/file/7ef6a2f2b722d371d5b79.mp4"
+INFO_IMG = "https://te.legra.ph/file/ba532b9ec22b98d506efa.mp4"
 
 
 #sleep how many times after each edit in 'hack' 
@@ -76,7 +76,7 @@ def alive(update: Update, context: CallbackContext):
         time.sleep(EDIT_SLEEP)
     update.effective_message.reply_video(
             INFO_IMG, caption=f"""
-                                  *ᴍᴀsᴛᴇʀ*  - [Katsuki Bakugo](t.me/bakugoNo1)\n*Bᴏᴛsᴛᴀᴛs* - `Alive`\n*PTʙ ᴠᴇʀsɪᴏɴ* - `{ptbver}`\n*Tᴇʟᴇᴛʜᴏɴ* - `{telever}`\n*Pʀᴏɢʀᴀᴍ* - `{pyrover}`""",reply_markup=InlineKeyboardMarkup(
+                                  *ᴍᴀsᴛᴇʀ*  - [Isʜɪᴋᴋɪ Aᴋᴀʙᴀɴᴇ](t.me/ishikki_akabane)\n*Bᴏᴛsᴛᴀᴛs* - `Alive`\n*PTʙ ᴠᴇʀsɪᴏɴ* - `{ptbver}`\n*Tᴇʟᴇᴛʜᴏɴ* - `{telever}`\n*Pʀᴏɢʀᴀᴍ* - `{pyrover}`""",reply_markup=InlineKeyboardMarkup(
                 [
                     [
        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"t.me/{SUPPORT_CHAT}"),
