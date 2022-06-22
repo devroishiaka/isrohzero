@@ -103,19 +103,19 @@ def cban(update: Update, context: CallbackContext) -> Optional[str]:
 
     if is_user_ban_protected(update, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("I'd never ban my owner.")
+            message.reply_text("Trying to put me against my Darling, huh?")
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our own.")
+            message.reply_text("I can't act against the person who take care of me.")
         elif user_id in DRAGONS:
-            message.reply_text("My sudos are ban immune")
+            message.reply_text("Fighting this being here will put users lives at risk.")
         elif user_id in DEMONS:
-            message.reply_text("My support users are ban immune")
+            message.reply_text("Bring an order from my support group to ban this user.")
         elif user_id in TIGERS:
-            message.reply_text("Sorry, He is Tiger Level Disaster.")
+            message.reply_text("Sorry, he is immune to my attacks")
         elif user_id in WOLVES:
-            message.reply_text("Neptunians are ban immune!")
+            message.reply_text("This people are ban immune!")
         else:
-            message.reply_text("This user has immunity and cannot be banned.")
+            message.reply_text("This user is too sexy to be banned.")
         return log_message
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
