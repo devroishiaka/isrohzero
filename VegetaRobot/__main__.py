@@ -93,11 +93,11 @@ buttons = [
     [
         InlineKeyboardButton(
                             text="☑ ᴀᴅᴅ ZeroTwo ☑",
-                            url="t.me/VegetaRobot?startgroup=true"),
+                            url="t.me/zerotwoxdbot?startgroup=true"),
                     ],
                      [
                        InlineKeyboardButton(text="🔄 ɪɴʟɪɴᴇ", switch_inline_query_current_chat=""),
-                       InlineKeyboardButton(text="🔒 ᴄʟᴏsᴇ", callback_data="unbanb_del"),
+                       InlineKeyboardButton(text="Kᴀᴢᴜᴍᴀ Cʟᴀɴ", url="https://t.me/KazumaclanXD"),
                     ],
                    [
                        InlineKeyboardButton(text="Hᴇʟᴘ", callback_data="help_back"),
@@ -115,11 +115,10 @@ Hᴀvᴇ ᴀ lᴏᴏᴋ ᴀᴛ ᴛhᴇ fᴏllᴏwing fᴏr ᴀn idᴇᴀ ᴏf s�
 HELP_MSG = "Click the button below to get help manu in your pm."
 DONATE_STRING = """*I dont need any donations 🙂*"""
 HELP_IMG= "https://te.legra.ph/file/23876fa862e4733c1a404.mp4"
-GROUPSTART_IMG= "https://telegra.ph/file/1cbafa58dda18528f9e0c.mp4"
+GROUPSTART_IMG= "https://te.legra.ph/file/0bfc45309b9863817428b.mp4"
 
-VEGETA_IMG = ( "https://telegra.ph//file/a47f16c936dbbd4165399.jpg",
-               "https://telegra.ph//file/5026650d5e3f0b83c6d29.jpg",
-               "https://telegra.ph/file/561fa547f3c4940c95ddf.jpg",)       
+VEGETA_IMG = ( "https://te.legra.ph/file/31717e8a5b4c5ab42dbe2.jpg",
+               "https://te.legra.ph/file/31717e8a5b4c5ab42dbe2.jpg",)       
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -230,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         first_name = update.effective_user.first_name
         update.effective_message.reply_animation(
-            GROUPSTART_IMG, caption= "*Hello!\n ❅•°• {} •°•❅,*\n*ZeroTwo here*\n*Power lavel time* : {} ".format(
+            GROUPSTART_IMG, caption= "Hello!\n •°•《 {} 》•°•,\n《Zerotwo》 here\nAwake since : {} ".format(
              first_name,uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
@@ -374,7 +373,7 @@ def vegeta_about_callback(update, context):
     query = update.callback_query
     if query.data == "vegeta_":
         query.message.edit_caption(
-            "๏ I'm *Zᴇʀᴏᴛᴡᴏ*, a powerful group management bot built to help you manage your group easily."
+            "๏ I'm Zᴇʀᴏᴛᴡᴏ, a powerful group management bot built to help you manage your group easily."
             "\n❍ I can restrict users."
             "\n❍ I can greet users with customizable welcome messages and even set a group's rules."
             "\n❍ I have an advanced anti-flood system."
@@ -385,8 +384,8 @@ def vegeta_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", callback_data="vegeta_admin"),
-                    InlineKeyboardButton(text="📓 ɴᴏᴛᴇs", callback_data="vegeta_notes"),
+                    InlineKeyboardButton(text="ɢᴜɪᴅᴇ", callback_data="vegeta_admin"),
+                    InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", callback_data="vegeta_notes"),
                  ],
                  [
                     InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="vegeta_support"),
@@ -408,9 +407,13 @@ def vegeta_about_callback(update, context):
 
     elif query.data == "vegeta_admin":
         query.message.edit_caption(
-            "Zerotwo bot's source code is now private"
-            "\nIf you have any problem regarding the source code then message the onwer @ishikki_akabane",
-            parse_mode=ParseMode.MARKDOWN,
+            "ʜᴇʀᴇ ɪs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴛʜɪɴɢs ɪ ᴄᴀɴ ᴅᴏ"
+            "\n❍ Wᴀrning sysᴛᴇʍ."
+            "\n❍ Flᴏᴏd ᴄᴏnᴛrᴏl sysᴛᴇʍ."
+            "\n❍ Nᴏᴛᴇ ᴋᴇᴇᴩing sysᴛᴇʍ."
+            "\n❍ Filᴛᴇrs ᴋᴇᴇᴩing sysᴛᴇʍ."
+            "\n❍ Aᴩᴩrᴏvᴀls ᴀnd ʍuᴄh ʍᴏrᴇ.",
+            parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="❮❮ Bᴀᴄᴋ", callback_data="vegeta_")]]
             ),
@@ -418,10 +421,8 @@ def vegeta_about_callback(update, context):
 
     elif query.data == "vegeta_notes":
         query.message.edit_caption(
-            "<b>๏ Setting up notes</b>"
-            "\nYou can save message/media/audio or anything as notes"
-            "\nto get a note simply use # at the beginning of a word"
-            "\n\nYou can also set buttons for notes and filters (refer help menu)",
+            "Zerotwo bot's source code is now private"
+            "\nIf you have any problem regarding the source code then message the onwer @ishikki_akabane",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="❮❮ Bᴀᴄᴋ", callback_data="vegeta_")]]
@@ -487,8 +488,8 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🔒 ᴏᴘᴇɴ ᴄᴏᴍᴍᴀᴅs",
-                            callback_data="help_back"
+                            text="Help",
+                            url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
                 ]
@@ -734,7 +735,7 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}","""《Zᴇʀᴏᴛᴡᴏ》ᏴϴͲ ႮᏢᎠᎪͲᎬᎠ ՏႮᏟᏟᎬՏՏҒႮᏞᏞᎽ ◉‿◉
-            ᎡႮΝΝᏆΝᏀ ՏᎷϴϴͲᎻᏞᎽ ᏞᏆᏦᎬ ᏴᎬҒϴᎡᎬ""", parse_mode=ParseMode.MARKDOWN) 
+            \nᎡႮΝΝᏆΝᏀ ՏᎷϴϴͲᎻᏞᎽ ᏞᏆᏦᎬ ᏴᎬҒϴᎡᎬ""", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
