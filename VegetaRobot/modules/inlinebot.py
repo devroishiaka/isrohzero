@@ -56,7 +56,7 @@ def inlinequery(update: Update, _) -> None:
             "title": "About & info",
             "description": "About And informations",
             "message_text": "Click the below button for about and commads",
-            "thumb_urL": "http://telegra.ph/file/6e8a69b73969cc433d2cf.jpg",
+            "thumb_urL": "https://te.legra.ph/file/cc633306a99331d5bb3af.jpg",
             "keyboard": "about",
         },
     ]
