@@ -78,25 +78,25 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Trying to put me against a God level disaster huh?")
+            message.reply_text("Trying to put me against my Darling huh?")
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our own.")
+            message.reply_text("I can't act against the person who take care of me.")
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Dragon here will put civilian lives at risk."
+                "Fighting this being here will put users lives at risk."
             )
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Demon disaster."
+                "Bring an order from my support group to ban this user."
             )
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Tiger disaster."
+                "Bring an order from my support group to ban this user."
             )
         elif user_id in WOLVES:
-            message.reply_text("Wolf abilities make them ban immune!")
+            message.reply_text("Whitelist abilities make them ban immune!")
         else:
-            message.reply_text("This user has immunity and cannot be banned.")
+            message.reply_text("This user is too sexy to be banned.")
         return log_message
     if message.text.startswith("/s"):
         silent = True
@@ -508,14 +508,19 @@ def selfunban(context: CallbackContext, update: Update) -> str:
     return log
 
 
-        
+BAN_HANDLER = CommandHandler(["ban", "sban"], ban)
+TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban)
+PUNCH_HANDLER = CommandHandler(["punch", "kick"], punch)
+UNBAN_HANDLER = CommandHandler("unban", unban)
+UNBAN_BUTTON_HANDLER = CallbackQueryHandler(unbanb_btn, pattern=r"unbanb_")
+ROAR_HANDLER = CommandHandler("roar", selfunban)
+PUNCHME_HANDLER = DisableAbleCommandHandler(["punchme", "kickme"], punchme, filters=Filters.group)
+
+__mod_name__ = "Bᴀɴs"
+
 __help__ = """
  ✪︎ `/punchme`*:* punches the user who issued the command.
  ✪︎ `/kickme`*:* kicks the user who issued the command.\n
-*Muting a user commands:*
- ✪︎ `/mute <userhandle>`*:* silences a user. Can also be used as a reply, muting the replied to user.
- ✪︎ `/tmute <userhandle> x(m/h/d)`*:* mutes a user for x time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪︎ `/unmute <userhandle>`*:* unmutes a user. Can also be used as a reply, muting the replied to user.\n
 *ban a user commands:*
  ✪︎ `/ban <userhandle>`*:* bans a user. (via handle, or reply)
  ✪︎ `/sban <userhandle>`*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
@@ -528,16 +533,6 @@ __help__ = """
   ✪︎ `/uncban` or `/channelunban`unban channel. 
 """
 
-BAN_HANDLER = CommandHandler(["ban", "sban"], ban)
-TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban)
-PUNCH_HANDLER = CommandHandler(["punch", "kick"], punch)
-UNBAN_HANDLER = CommandHandler("unban", unban)
-UNBAN_BUTTON_HANDLER = CallbackQueryHandler(unbanb_btn, pattern=r"unbanb_")
-ROAR_HANDLER = CommandHandler("roar", selfunban)
-PUNCHME_HANDLER = DisableAbleCommandHandler(["punchme", "kickme"], punchme, filters=Filters.group)
-
-
-
 dispatcher.add_handler(BAN_HANDLER)
 
 dispatcher.add_handler(TEMPBAN_HANDLER)
@@ -547,10 +542,8 @@ dispatcher.add_handler(UNBAN_HANDLER)
 dispatcher.add_handler(ROAR_HANDLER)
 dispatcher.add_handler(PUNCHME_HANDLER)
 
-__mod_name__ = "ʙᴀɴ-ᴍᴜᴛᴇ"
 __handlers__ = [
     BAN_HANDLER,
-
     TEMPBAN_HANDLER,
     PUNCH_HANDLER,
     UNBAN_HANDLER,
