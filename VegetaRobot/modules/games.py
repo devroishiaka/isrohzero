@@ -89,5 +89,5 @@ __help__="""
 """
  
 
-__mod_name__ = "🎮Game"
+__mod_name__ = "Gᴀᴍᴇs"
 
