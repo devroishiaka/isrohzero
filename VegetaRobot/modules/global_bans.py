@@ -15,7 +15,7 @@ from VegetaRobot import (DEV_USERS, EVENT_LOGS, OWNER_ID, STRICT_GBAN, DRAGONS,
                           SUPPORT_CHAT, SPAMWATCH_SUPPORT_CHAT, DEMONS, TIGERS,
                           WOLVES, sw, dispatcher)
 from VegetaRobot.modules.helper_funcs.chat_status import (is_user_admin,
-                                                           support_plus,
+                                                           support_plus, sudo_plus, 
                                                            user_admin)
 from VegetaRobot.modules.helper_funcs.extraction import (extract_user,
                                                           extract_user_and_text)
