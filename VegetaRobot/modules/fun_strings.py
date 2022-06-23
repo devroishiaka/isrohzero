@@ -315,7 +315,7 @@ SFW_STRINGS = (
 )
     
   
-REPO = "https://Github.com/Ctzfamily/VegetaRobot"
+REPO = "Zero Two repo is now private, talk to Ishikki Akabane (@ishikki_akabane) for further more details."
 
   
   
