@@ -178,8 +178,8 @@ def pat(update: Update, context: CallbackContext):
                                                                      
             
     
-GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning , good morning)"), goodmorning, friendly="goodmorning")
-GOODNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodnight , good night)"), goodnight, friendly="goodnight")
+GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)("goodmorning", "good morning")"), goodmorning, friendly="goodmorning")
+GOODNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)("goodnight", "good night")"), goodnight, friendly="goodnight")
 REPO_HANDLER = DisableAbleCommandHandler("repo", repo)
 WISH_HANDLER = DisableAbleCommandHandler("wish", wish)                     
 YESNOWTF_HANDLER = DisableAbleCommandHandler("decide", yesnowtf)
