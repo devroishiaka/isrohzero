@@ -75,27 +75,27 @@ def gban(update: Update, context: CallbackContext):
 
     if int(user_id) in DEV_USERS:
         message.reply_text(
-            "That user is part of the Association\nI can't act against our own."
+            "That user is my care taker\nI can't act against our own."
         )
         return
 
     if int(user_id) in DRAGONS:
         message.reply_text(
-            "I spy, with my little eye... a disaster! Why are you guys turning on each other?"
+            "I spy, with my little eye... a sudo! Why are you guys turning on each other?"
         )
         return
 
     if int(user_id) in DEMONS:
         message.reply_text(
-            "OOOH someone's trying to gban a Demon Disaster! *grabs popcorn*")
+            "OOOH someone's trying to gban a support user! *grabs popcorn*")
         return
 
     if int(user_id) in TIGERS:
-        message.reply_text("That's a Tiger! They cannot be banned!")
+        message.reply_text("That's my supporter! I won't ban them!")
         return
 
     if int(user_id) in WOLVES:
-        message.reply_text("That's a Wolf! They cannot be banned!")
+        message.reply_text("That's a whitelist user! They cannot be banned!")
         return
 
     if user_id == bot.id:
@@ -147,7 +147,7 @@ def gban(update: Update, context: CallbackContext):
     message.reply_photo(GBAN_DONE,caption="Successfully GBAN DONE!",reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                  InlineKeyboardButton(text="View Gban ✨", url=f"https://t.me/vegetalogs")]],parse_mode=ParseMode.HTML)
+                  InlineKeyboardButton(text="View Gban ✨", url=f"https://t.me/logsforbots")]],parse_mode=ParseMode.HTML)
 )
 
     start_time = time.time()
@@ -162,6 +162,7 @@ def gban(update: Update, context: CallbackContext):
 
     log_message = (
         f"#GBANNED\n"
+        f"@zerotwoxdbot\n"
         f"<b>Oʀɪɢɪɴᴀᴛᴇᴅ Fʀᴏᴍ:</b> <code>{chat_origin}</code>\n"
         f"<b>Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
         f"<b>Bᴀɴɴᴇᴅ Usᴇʀ:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
@@ -176,8 +177,7 @@ def gban(update: Update, context: CallbackContext):
 
     if EVENT_LOGS:
         try:
-            log = bot.send_photo(
-                EVENT_LOGS, GBAN_IMG,caption=log_message, parse_mode=ParseMode.HTML)
+            log = bot.send_message(EVENT_LOGS, log_message, parse_mode=ParseMode.HTML)
         except BadRequest as excp:
             log = bot.send_message(
                 EVENT_LOGS,log_message +
@@ -291,6 +291,7 @@ def ungban(update: Update, context: CallbackContext):
 
     log_message = (
         f"#UNGBANNED\n"
+        f"@zerotwoxdbot\n"
         f"<b>Oʀɪɢɪɴᴀᴛᴇᴅ Fʀᴏᴍ:</b> <code>{chat_origin}</code>\n"
         f"<b>Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
         f"<b>Uɴʙᴀɴɴᴇᴅ Usᴇʀ:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
@@ -532,7 +533,7 @@ dispatcher.add_handler(UNGBAN_HANDLER)
 dispatcher.add_handler(GBAN_LIST)
 dispatcher.add_handler(GBAN_STATUS)
 
-__mod_name__ = "🛡AntiSpam"
+__mod_name__ = "Aɴᴛɪ-Fʟᴏᴏᴅ"
 __handlers__ = [GBAN_HANDLER, UNGBAN_HANDLER, GBAN_LIST, GBAN_STATUS]
 
 if STRICT_GBAN:  # enforce GBANS if this is set
