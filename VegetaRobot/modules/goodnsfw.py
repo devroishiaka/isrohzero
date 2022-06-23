@@ -218,8 +218,6 @@ __handlers__ = [
 ]
 
 __help__ = """
-Module credits: [VegetaRobot](https://github.com/Ctzfamily/VegetaRobot/Vegeta/VegetaRobot/modules/goodnsfw.py) ,
-
 Usage:
    
 /addnsfw : Enable NSFW mode
@@ -239,4 +237,4 @@ Commands :
  
 """
 
-__mod_name__ = "🐰AnimePG"
+__mod_name__ = "NSFW"
