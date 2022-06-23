@@ -103,7 +103,7 @@ def yesnowtf(update, context):
 @run_async
 @typing_action
 def repo(update, context):
-    update.effective_message.reply_audio(fun.REPO)   
+    update.effective_message.reply_text(fun.REPO)   
    
 
 
@@ -130,12 +130,6 @@ def abuse(update, context):
 @typing_action
 def truth(update, context):
     update.effective_message.reply_text(random.choice(fun.TRUTH))
-
-@run_async
-@typing_action
-def tamilmeme(update, context):
-    update.effective_message.reply_photo(random.choice(fun.TAMIL_MEME))
-
 
 @run_async
 @typing_action
@@ -184,7 +178,7 @@ def pat(update: Update, context: CallbackContext):
                                                                      
             
     
-GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning|good morning)"), goodmorning, friendly="goodmorning")
+GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning)"), goodmorning, friendly="goodmorning")
 GOODNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodnight|good night)"), goodnight, friendly="goodnight")
 REPO_HANDLER = DisableAbleCommandHandler("repo", repo)
 WISH_HANDLER = DisableAbleCommandHandler("wish", wish)                     
@@ -193,7 +187,6 @@ GBUN_HANDLER = CommandHandler("gbun", gbun)
 PAT_HANDLER = DisableAbleCommandHandler("pat", pat)
 GBAM_HANDLER = CommandHandler("gbam", gbam)
 DARE_HANDLER = DisableAbleCommandHandler("dare", dare)
-TAMILMEME_HANDLER = DisableAbleCommandHandler("tamilmeme", tamilmeme)
 TRUTH_HANDLER = DisableAbleCommandHandler("truth", truth)
 INSULT_HANDLER = DisableAbleCommandHandler("insult", insult)
 ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse)
@@ -210,7 +203,6 @@ dispatcher.add_handler(YESNOWTF_HANDLER)
 dispatcher.add_handler(TRUTH_HANDLER)
 dispatcher.add_handler(REPO_HANDLER)
 dispatcher.add_handler(DARE_HANDLER)
-dispatcher.add_handler(TAMILMEME_HANDLER)
 
 __help__ = """
 *Goodnight* & *goodmorning* 
@@ -221,11 +213,10 @@ bot send GM or GN image,
  ✪︎ /truth or /dare - bot send funny messages.
  ✪︎ /insult - bot send insult message.
  ✪︎ /abuse - bot send abuse message.
- ✪︎ /tamilmeme - get meme for tami language.
 
 """
 
-__mod_name__ = "ғᴜɴs"
+__mod_name__ = "Fᴜɴ"
 
 
 #guys this it you like pegasusXteam ask join @pegasusSupportofficial
