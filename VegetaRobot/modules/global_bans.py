@@ -22,8 +22,7 @@ from VegetaRobot.modules.helper_funcs.extraction import (extract_user,
 from VegetaRobot.modules.helper_funcs.misc import send_to_list
 
 GBAN_IMG="http://telegra.ph/file/c2085248c7e5e77589667.jpg"
-GBAN_DONE="http://telegra.ph/file/890bb9006af6a914362a1.jpg"
-
+GBAN_DONE="https://te.legra.ph/file/2ce6f4989154438011059.jpg"
 
 GBAN_ENFORCE_GROUP = 6
 
