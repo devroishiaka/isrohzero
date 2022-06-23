@@ -83,46 +83,42 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-    ┗► *{}* ◄┛
-
-I Am *Prince Vegeta* Add 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐈 𝐖𝐢𝐥𝐥 𝐃𝐞𝐬𝐭𝐫𝐨𝐲 𝐄𝐯𝐢𝐥𝐬 𝐖𝐢𝐭𝐡 𝐌𝐲 Powers...\n
-*JOIN OFFICIAL* -
-[CHANNEL](t.me/pegasusUpdates) - [SUPPORT](t.me/pegasusSupportChat)\n
-──『*ᴛʜᴀɴᴋs  ғᴏʀ  ᴜsɪɴɢ*』
+*Hᴇʟʟᴏ {} *
+───────────────────────
+× *I'ᴍ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
+× *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-                            text="☑ ᴀᴅᴅ ᴠᴇɢᴇᴛᴀ ☑",
-                            url="t.me/VegetaRobot?startgroup=true"),
+                            text="☑ ᴀᴅᴅ ZeroTwo ☑",
+                            url="t.me/zerotwoxdbot?startgroup=true"),
                     ],
                      [
                        InlineKeyboardButton(text="🔄 ɪɴʟɪɴᴇ", switch_inline_query_current_chat=""),
-                       InlineKeyboardButton(text="🔒 ᴄʟᴏsᴇ", callback_data="unbanb_del"),
+                       InlineKeyboardButton(text="Kᴀᴢᴜᴍᴀ Cʟᴀɴ", url="https://t.me/KazumaclanXD"),
                     ],
                    [
-                       InlineKeyboardButton(text="🔐 ʜᴇʟᴘ", callback_data="help_back"),
-                       InlineKeyboardButton(text="💕 ᴀʙᴏᴜᴛ", callback_data="vegeta_"
+                       InlineKeyboardButton(text="Hᴇʟᴘ", callback_data="help_back"),
+                       InlineKeyboardButton(text="Iɴғᴏ", callback_data="vegeta_"
          ),
     ],
 ] 
 
 HELP_STRINGS = """
 ʜᴇʟʟᴏ ᴛʜᴇʀᴇ! 
-- /donate | *ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴏɴ ʜᴏᴡ ᴛᴏ ᴅᴏɴᴀᴛᴇ!*
-- /settings | *BOT PM:  ᴡɪʟʟ sᴇɴᴅ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs ғᴏʀ ᴀʟʟ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs.
-ʜᴇʀᴇ ᴛʜᴇ ʟɪsᴛ ᴄᴏᴍᴍᴇɴᴛs  :*
+*I'ʍ ᴀ ʍᴏdulᴀr grᴏuᴩ ʍᴀnᴀgᴇʍᴇnᴛ ʙᴏᴛ wiᴛh ᴀ fᴇw fun ᴇxᴛrᴀs!
+Hᴀvᴇ ᴀ lᴏᴏᴋ ᴀᴛ ᴛhᴇ fᴏllᴏwing fᴏr ᴀn idᴇᴀ ᴏf sᴏʍᴇ ᴏf ᴛhᴇ ᴛhings I ᴄᴀn hᴇlᴩ yᴏu wiᴛh*
 """
 
 HELP_MSG = "Click the button below to get help manu in your pm."
-DONATE_STRING = """*don't need donate I'm free for every one add your group's this my donate🙂*"""
-HELP_IMG= "https://telegra.ph/file/9d2c6e3b28afe7619856e.jpg"
-GROUPSTART_IMG= "https://telegra.ph/file/1cbafa58dda18528f9e0c.mp4"
+DONATE_STRING = """*I dont need any donations 🙂*"""
+HELP_IMG= "https://te.legra.ph/file/23876fa862e4733c1a404.mp4"
+GROUPSTART_IMG= "https://te.legra.ph/file/0bfc45309b9863817428b.mp4"
 
-VEGETA_IMG = ( "https://telegra.ph//file/a47f16c936dbbd4165399.jpg",
-               "https://telegra.ph//file/5026650d5e3f0b83c6d29.jpg",
-               "https://telegra.ph/file/561fa547f3c4940c95ddf.jpg",)       
+VEGETA_IMG = ( "https://te.legra.ph/file/31717e8a5b4c5ab42dbe2.jpg",
+               "https://te.legra.ph/file/31717e8a5b4c5ab42dbe2.jpg",)       
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -233,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         first_name = update.effective_user.first_name
         update.effective_message.reply_animation(
-            GROUPSTART_IMG, caption= "*hello!\n ┗► {} ◄┛,*\n*Super Saiyan here*\n*Power lavel time* : {} ".format(
+            GROUPSTART_IMG, caption= "Hello!\n •°•《 {} 》•°•,\n《Zerotwo》 here\nAwake since : {} ".format(
              first_name,uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
@@ -377,28 +373,26 @@ def vegeta_about_callback(update, context):
     query = update.callback_query
     if query.data == "vegeta_":
         query.message.edit_caption(
-            "๏ I'm *Vegeta*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Vegeta's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for @VegetaRobot.",
+            "๏ I'm Zᴇʀᴏᴛᴡᴏ, a powerful group management bot built to help you manage your group easily."
+            "\n❍ I can restrict users."
+            "\n❍ I can greet users with customizable welcome messages and even set a group's rules."
+            "\n❍ I have an advanced anti-flood system."
+            "\n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
+            "\n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
+            "\n❍ I check for admins' permissions before executing any command and more stuffs",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="👮 ᴀᴅᴍɪɴs", callback_data="vegeta_admin"),
-                    InlineKeyboardButton(text="📓 ɴᴏᴛᴇs", callback_data="vegeta_notes"),
+                    InlineKeyboardButton(text="ɢᴜɪᴅᴇ", callback_data="vegeta_admin"),
+                    InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", callback_data="vegeta_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="💕 ᴄʜᴀɴɴᴇʟs", callback_data="vegeta_support"),
-                    InlineKeyboardButton(text="💕 sᴛᴀᴛs", callback_data="stats_callback"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="vegeta_support"),
+                    InlineKeyboardButton(text="Bᴏᴛ ᴀᴅᴍɪɴs", url="https://t.me/KazumaclanXD/13"),
                  ],
                  [
-                    InlineKeyboardButton(text="⬅️ ʙᴀᴄᴋ", callback_data="vegeta_back"),
+                    InlineKeyboardButton(text="❮❮ Bᴀᴄᴋ", callback_data="vegeta_back"),
                  ]
                 ]
             ),
@@ -413,49 +407,45 @@ def vegeta_about_callback(update, context):
 
     elif query.data == "vegeta_admin":
         query.message.edit_caption(
-            "*๏ Let's make your group bit effective now*"
-            "\nCongragulations, VegetaRobot now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
-            parse_mode=ParseMode.MARKDOWN,
+            "ʜᴇʀᴇ ɪs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴛʜɪɴɢs ɪ ᴄᴀɴ ᴅᴏ"
+            "\n❍ Wᴀrning sysᴛᴇʍ."
+            "\n❍ Flᴏᴏd ᴄᴏnᴛrᴏl sysᴛᴇʍ."
+            "\n❍ Nᴏᴛᴇ ᴋᴇᴇᴩing sysᴛᴇʍ."
+            "\n❍ Filᴛᴇrs ᴋᴇᴇᴩing sysᴛᴇʍ."
+            "\n❍ Aᴩᴩrᴏvᴀls ᴀnd ʍuᴄh ʍᴏrᴇ.",
+            parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="vegeta_")]]
+                [[InlineKeyboardButton(text="❮❮ Bᴀᴄᴋ", callback_data="vegeta_")]]
             ),
         )
 
     elif query.data == "vegeta_notes":
         query.message.edit_caption(
-            "<b>๏ Setting up notes</b>"
-            "\nYou can save message/media/audio or anything as notes"
-            "\nto get a note simply use # at the beginning of a word"
-            "\n\nYou can also set buttons for notes and filters (refer help menu)",
+            "Zerotwo bot's source code is now private"
+            "\nIf you have any problem regarding the source code then message the onwer @ishikki_akabane",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="vegeta_")]]
+                [[InlineKeyboardButton(text="❮❮ Bᴀᴄᴋ", callback_data="vegeta_")]]
             ),
         )
     elif query.data == "vegeta_support":
         query.message.edit_caption(
-            "*๏ Vegeta support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Vegeta.",
+            "*๏ support chats*"
+            "\nJoin My Support Group if you want to report a problem on Zerotwo.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/Vegetasupport"),
-                    InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇs", url="https://t.me/vegetaupdates"),
+                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/suppportxd"),
+                    InlineKeyboardButton(text="ғᴇᴅᴇʀᴀᴛɪᴏɴ", url="https://t.me/KazumaclanXD/23"),
                  ],
                  [
-                       InlineKeyboardButton(text="ɴᴇᴛᴡᴏʀᴋ", url="t.me/XForceNetwork"),
-                       InlineKeyboardButton(text="ʟᴏɢs", url="t.me/VegetaLogs"),
+                       InlineKeyboardButton(text="ɴᴇᴛᴡᴏʀᴋ", url="t.me/kazumaclanxd"),
+                       InlineKeyboardButton(text="ʟᴏɢs", url="t.me/logsforbots"),
                    
                    ],
                     [
-                     InlineKeyboardButton(text="Go Back", callback_data="vegeta_"),
+                     InlineKeyboardButton(text="❮❮ Bᴀᴄᴋ", callback_data="vegeta_"),
                  
                  ]
                 ]
@@ -498,8 +488,8 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🔒 ᴏᴘᴇɴ ᴄᴏᴍᴍᴀᴅs",
-                            callback_data="help_back"
+                            text="Help",
+                            url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
                 ]
@@ -744,7 +734,8 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}","[SUPER SAIYAN VEGETA IS BACK](https://telegra.ph/file/d3db0babad0d1729c5f59.jpg)", parse_mode=ParseMode.MARKDOWN) 
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}","""《Zᴇʀᴏᴛᴡᴏ》ᏴϴͲ ႮᏢᎠᎪͲᎬᎠ ՏႮᏟᏟᎬՏՏҒႮᏞᏞᎽ ◉‿◉
+            \nᎡႮΝΝᏆΝᏀ ՏᎷϴϴͲᎻᏞᎽ ᏞᏆᏦᎬ ᏴᎬҒϴᎡᎬ""", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
