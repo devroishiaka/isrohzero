@@ -178,8 +178,10 @@ def pat(update: Update, context: CallbackContext):
                                                                      
             
     
-GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)("goodmorning", "good morning")"), goodmorning, friendly="goodmorning")
-GOODNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)("goodnight", "good night")"), goodnight, friendly="goodnight")
+GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning)"), goodmorning, friendly="goodmorning")
+GOODMORNING2_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(good morning)"), goodmorning, friendly="goodmorning")
+GOODNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodnight)"), goodnight, friendly="goodnight")
+GOODNIGHT2_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(good night)"), goodnight, friendly="goodnight")
 REPO_HANDLER = DisableAbleCommandHandler("repo", repo)
 WISH_HANDLER = DisableAbleCommandHandler("wish", wish)                     
 YESNOWTF_HANDLER = DisableAbleCommandHandler("decide", yesnowtf)
@@ -192,7 +194,9 @@ INSULT_HANDLER = DisableAbleCommandHandler("insult", insult)
 ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse)
 
 dispatcher.add_handler(GOODMORNING_HANDLER)
+dispatcher.add_handler(GOODMORNING_HANDLER2)
 dispatcher.add_handler(GOODNIGHT_HANDLER)
+dispatcher.add_handler(GOODNIGHT_HANDLER2)
 dispatcher.add_handler(INSULT_HANDLER)
 dispatcher.add_handler(WISH_HANDLER)                        
 dispatcher.add_handler(ABUSE_HANDLER)
