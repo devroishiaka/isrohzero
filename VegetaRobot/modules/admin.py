@@ -703,7 +703,7 @@ __help__ = """
 """
 
 
-ADMINLIST_HANDLER = DisableAbleCommandHandler(["adminlist", "staff"], adminlist, filters=Filters.group)
+ADMINLIST_HANDLER = DisableAbleCommandHandler(["adminlist", "admins"], adminlist, filters=Filters.group)
 INVITE_HANDLER = DisableAbleCommandHandler(["grouplink", "invitelink"], invite, filters=Filters.group)
 PIN_HANDLER = CommandHandler("pin", pin, filters=Filters.group)
 SET_DESC_HANDLER = CommandHandler(["setdesc","setgdesc"], set_desc, filters=Filters.group)
@@ -733,7 +733,7 @@ dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 
-__mod_name__ = "ᴀᴅᴍɪɴs"
+__mod_name__ = "Aᴅᴍɪɴ"
 __command_list__ = [
     "adminlist", "admins", "setgpack", "invitelink", "promote", "demote", "admincache", "setgpic", "delgpic", "setgtitle", "setdesc"
 ]
