@@ -17,7 +17,7 @@ from VegetaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMe
 from VegetaRobot.modules.helper_funcs.alternate import typing_action
 from VegetaRobot.modules.helper_funcs.extraction import extract_user
 
-GN_IMG= "https://telegra.ph/file/6b67b1f44a669a634cab8.jpg"
+GN_IMG= "https://te.legra.ph/file/75f5aa6dedecbcefe47a1.jpg"
 
 @run_async
 @typing_action
@@ -27,7 +27,7 @@ def goodnight(update, context):
     reply = f"*Hey {escape_markdown(first_name)} \nGood Night! 😴*"
     message.reply_photo(GN_IMG,reply, parse_mode=ParseMode.MARKDOWN)
 
-GM_IMG= "https://telegra.ph/file/e3b27f1b746344c8fdb28.jpg"
+GM_IMG= "https://te.legra.ph/file/23f8d5dfc8fb3fcd9ec77.jpg"
 @run_async
 @typing_action
 def goodmorning(update, context):
@@ -36,7 +36,7 @@ def goodmorning(update, context):
     reply = f"*Hey {escape_markdown(first_name)} \n Good Morning!☀*"
     message.reply_photo(GM_IMG,reply, parse_mode=ParseMode.MARKDOWN)
 
-WISH_IMG="https://telegra.ph/file/5c1f2e655a539c7f8b2be.jpg"
+WISH_IMG="https://te.legra.ph/file/651c94da919249a67c1ff.jpg"
 @run_async
 @typing_action
 def wish(update, context):
@@ -103,7 +103,7 @@ def yesnowtf(update, context):
 @run_async
 @typing_action
 def repo(update, context):
-    update.effective_message.reply_audio(fun.REPO)   
+    update.effective_message.reply_text(fun.REPO)   
    
 
 
@@ -130,12 +130,6 @@ def abuse(update, context):
 @typing_action
 def truth(update, context):
     update.effective_message.reply_text(random.choice(fun.TRUTH))
-
-@run_async
-@typing_action
-def tamilmeme(update, context):
-    update.effective_message.reply_photo(random.choice(fun.TAMIL_MEME))
-
 
 @run_async
 @typing_action
@@ -184,8 +178,8 @@ def pat(update: Update, context: CallbackContext):
                                                                      
             
     
-GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning|good morning)"), goodmorning, friendly="goodmorning")
-GOODNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodnight|good night)"), goodnight, friendly="goodnight")
+GOODMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(good morning)"), goodmorning, friendly="goodmorning")
+GOODNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(good night)"), goodnight, friendly="goodnight")
 REPO_HANDLER = DisableAbleCommandHandler("repo", repo)
 WISH_HANDLER = DisableAbleCommandHandler("wish", wish)                     
 YESNOWTF_HANDLER = DisableAbleCommandHandler("decide", yesnowtf)
@@ -193,7 +187,6 @@ GBUN_HANDLER = CommandHandler("gbun", gbun)
 PAT_HANDLER = DisableAbleCommandHandler("pat", pat)
 GBAM_HANDLER = CommandHandler("gbam", gbam)
 DARE_HANDLER = DisableAbleCommandHandler("dare", dare)
-TAMILMEME_HANDLER = DisableAbleCommandHandler("tamilmeme", tamilmeme)
 TRUTH_HANDLER = DisableAbleCommandHandler("truth", truth)
 INSULT_HANDLER = DisableAbleCommandHandler("insult", insult)
 ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse)
@@ -210,7 +203,6 @@ dispatcher.add_handler(YESNOWTF_HANDLER)
 dispatcher.add_handler(TRUTH_HANDLER)
 dispatcher.add_handler(REPO_HANDLER)
 dispatcher.add_handler(DARE_HANDLER)
-dispatcher.add_handler(TAMILMEME_HANDLER)
 
 __help__ = """
 *Goodnight* & *goodmorning* 
@@ -221,11 +213,10 @@ bot send GM or GN image,
  ✪︎ /truth or /dare - bot send funny messages.
  ✪︎ /insult - bot send insult message.
  ✪︎ /abuse - bot send abuse message.
- ✪︎ /tamilmeme - get meme for tami language.
 
 """
 
-__mod_name__ = "ғᴜɴs"
+__mod_name__ = "Fᴜɴ"
 
 
 #guys this it you like pegasusXteam ask join @pegasusSupportofficial
