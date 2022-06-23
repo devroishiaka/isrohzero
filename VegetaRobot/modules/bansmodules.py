@@ -1,4 +1,4 @@
-__mod__ = "Bᴀɴ-Mᴜᴛᴇ"
+__mod_name__ = "Bᴀɴ-Mᴜᴛᴇ"
 
 __help__ = """
  ✪︎ `/punchme`*:* punches the user who issued the command.
