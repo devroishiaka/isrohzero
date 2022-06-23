@@ -703,7 +703,7 @@ __help__ = """
 """
 
 
-ADMINLIST_HANDLER = DisableAbleCommandHandler(["adminlist", "staff"], adminlist, filters=Filters.group)
+ADMINLIST_HANDLER = DisableAbleCommandHandler(["adminlist", "admins"], adminlist, filters=Filters.group)
 INVITE_HANDLER = DisableAbleCommandHandler(["grouplink", "invitelink"], invite, filters=Filters.group)
 PIN_HANDLER = CommandHandler("pin", pin, filters=Filters.group)
 SET_DESC_HANDLER = CommandHandler(["setdesc","setgdesc"], set_desc, filters=Filters.group)
