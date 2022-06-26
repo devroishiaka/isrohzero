@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
     else:
         first_name = update.effective_user.first_name
         update.effective_message.reply_animation(
-            GROUPSTART_IMG, caption= "Hello!\n •°•《 {} 》•°•,\n《Zerotwo》 here\nAwake since : {} ".format(
+            GROUPSTART_IMG, caption= "•°•Hello!•°• \n•°•《 {} 》•°•\n《Zerotwo》 here\nAwake since : {} ".format(
              first_name,uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
