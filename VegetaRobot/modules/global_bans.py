@@ -22,7 +22,7 @@ from VegetaRobot.modules.helper_funcs.extraction import (extract_user,
 from VegetaRobot.modules.helper_funcs.misc import send_to_list
 
 GBAN_IMG="http://telegra.ph/file/c2085248c7e5e77589667.jpg"
-GBAN_DONE="http://telegra.ph/file/890bb9006af6a914362a1.jpg"
+GBAN_DONE="https://te.legra.ph/file/fdd4e1a1c05e077a623ea.jpg"
 
 
 GBAN_ENFORCE_GROUP = 6
@@ -162,6 +162,7 @@ def gban(update: Update, context: CallbackContext):
 
     log_message = (
         f"#GBANNED\n"
+        f"#ZereTwo\n"
         f"<b>Oʀɪɢɪɴᴀᴛᴇᴅ Fʀᴏᴍ:</b> <code>{chat_origin}</code>\n"
         f"<b>Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
         f"<b>Bᴀɴɴᴇᴅ Usᴇʀ:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
@@ -176,8 +177,8 @@ def gban(update: Update, context: CallbackContext):
 
     if EVENT_LOGS:
         try:
-            log = bot.send_photo(
-                EVENT_LOGS, GBAN_IMG,caption=log_message, parse_mode=ParseMode.HTML)
+            log = bot.send_message(
+                EVENT_LOGS, log_message, parse_mode=ParseMode.HTML)
         except BadRequest as excp:
             log = bot.send_message(
                 EVENT_LOGS,log_message +
@@ -532,7 +533,7 @@ dispatcher.add_handler(UNGBAN_HANDLER)
 dispatcher.add_handler(GBAN_LIST)
 dispatcher.add_handler(GBAN_STATUS)
 
-__mod_name__ = "🛡AntiSpam"
+__mod_name__ = "Aɴᴛɪ-Sᴘᴀᴍ"
 __handlers__ = [GBAN_HANDLER, UNGBAN_HANDLER, GBAN_LIST, GBAN_STATUS]
 
 if STRICT_GBAN:  # enforce GBANS if this is set
