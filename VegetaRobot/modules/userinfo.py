@@ -332,25 +332,25 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is '<b>MASTER</b>'."
+        text += "\n\nThis person is '<b>OWNER</b>'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis person is '<b>S-Rank</b>'."
+        text += "\n\nThis person is '<b>S-Class</b>'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is '<b>A-Rank</b>'."
+        text += "\n\nThis person is '<b>A-Class</b>'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is '<b>B-Rank</b>'."
+        text += "\n\nThis person is '<b>B-Class</b>'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThis person is 'C-Rank'."
+        text += "\n\nThis person is 'C-Class'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis person is 'D-Rank'."
+        text += "\n\nThis person is 'D-Class'."
         disaster_level_present = True
     elif user.id == 2128359921:
-        text += "\n\n <b>I'm Prince Vegeta </b> \n <b> I hope of planet's</b>."
+        text += "\n\n <b>I'm Zero Two </b> \n <b> I hope of planet's</b>."
         disaster_level_present = True
 
     try:
