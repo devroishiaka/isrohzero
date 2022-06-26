@@ -41,7 +41,7 @@ __help__ = """
 Make me send a message to a specific chat.
 """
 
-__mod_name__ = "🎀Snipe"
+__mod_name__ = "Sɴɪᴘᴇ"
 
 SNIPE_HANDLER = CommandHandler(
     "snipe",
