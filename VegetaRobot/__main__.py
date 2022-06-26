@@ -114,7 +114,7 @@ Hᴀvᴇ ᴀ lᴏᴏᴋ ᴀᴛ ᴛhᴇ fᴏllᴏwing fᴏr ᴀn idᴇᴀ ᴏf s�
 
 HELP_MSG = "Click the button below to get help manu in your pm."
 DONATE_STRING = """*I dont need any donations 🙂*"""
-HELP_IMG= "https://te.legra.ph/file/23876fa862e4733c1a404.mp4"
+HELP_IMG= "https://te.legra.ph/file/57b016764761b63d0edab.jpg"
 GROUPSTART_IMG= "https://te.legra.ph/file/0bfc45309b9863817428b.mp4"
 
 VEGETA_IMG = ( "https://te.legra.ph/file/31717e8a5b4c5ab42dbe2.jpg",
