@@ -42,7 +42,7 @@ from VegetaRobot.modules.helper_funcs.chat_status import sudo_plus
 from VegetaRobot.modules.helper_funcs.extraction import extract_user
 from VegetaRobot import telethn
 
-VEGETA ="http://telegra.ph/file/a1c938cf6e2b271e81a9a.jpg"
+VEGETA ="https://te.legra.ph/file/57b016764761b63d0edab.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -252,7 +252,7 @@ def pfp(update, context):
     else:
         return
     
-    text="*Made by @VegetaRobot*"
+    text="*Made by @zerotwo_xd_bot*"
     text +=f"\nPFP by *{html.escape(user.first_name)}*"
     profile = bot.get_user_profile_photos(user_id).photos[0][-1]
     bot.sendChatAction(chat.id, "upload_photo")
@@ -386,9 +386,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/vegetaUpdates/166"),
+                                "Health", url="https://t.me/updatesxd/4"),
                             InlineKeyboardButton(
-                                "Disaster", switch_inline_query_current_chat=".test"),
+                                "Disaster", url="https://t.me/updatesxd/5"),
                         ],
                     ]
                 ),
@@ -525,7 +525,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the Ackermans to set my bio.",
+                "Erm... yeah, I only trust Ishikki to set my bio.",
             )
             return
 
@@ -583,7 +583,7 @@ Examples:
 ❂ /json*:* Get Detailed info about any message.
 
 *What is that health thingy?*
- Come and see [HP System explained](https://t.me/vegetaUpdates/166)
+ Come and see [HP System explained](https://t.me/updatesxd/4)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
