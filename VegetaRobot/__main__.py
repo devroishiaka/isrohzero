@@ -93,7 +93,7 @@ buttons = [
     [
         InlineKeyboardButton(
                             text="☑ ᴀᴅᴅ ZeroTwo ☑",
-                            url="t.me/zerotwoxdbot?startgroup=true"),
+                            url="t.me/zerotwo_xd_bot?startgroup=true"),
                     ],
                      [
                        InlineKeyboardButton(text="🔄 ɪɴʟɪɴᴇ", switch_inline_query_current_chat=""),
