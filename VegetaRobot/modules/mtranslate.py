@@ -55,7 +55,7 @@ def languages(update: Update, context: CallbackContext) -> None:
     )
         )
 
-__mod_name__ = "Translator"
+__mod_name__ = "Tʀᴀɴsʟᴀᴛᴏʀ"
 
 __help__ = """
  ❍ /tr or /tl (language code) as reply to a long message
