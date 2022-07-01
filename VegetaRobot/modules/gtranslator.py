@@ -15,18 +15,7 @@ from VegetaRobot.modules.disable import DisableAbleCommandHandler
 from telegram.ext import run_async
 
 
-__help__ = """ 
-Use this module to translate stuff!
-*Commands:*
-❂ /tl (or /tr): as a reply to a message, translates it to English.
-❂ /tl <lang>: translates to <lang>
-eg: /tl ja: translates to Japanese.
-❂ /tl <source>//<dest>: translates from <source> to <lang>.
-eg:  /tl ja//en: translates from Japanese to English.
-❂ /langs: get a list of supported languages for translation.
-"""
-
-__mod_name__ = "Tʀᴀɴsʟᴀᴛᴏʀ"
+__mod_name__ = "Translation"
 
 
 trans = Translator()
@@ -62,7 +51,7 @@ async def translate(_, message: Message) -> None:
     await message.reply_text(reply, parse_mode="html")
 
 
-def languages(update: Update, context: CallbackContext) -> None:
+def languagess(update: Update, context: CallbackContext) -> None:
     update.effective_message.reply_text(
         "Click on the button below to see the list of supported language codes.",
         reply_markup=InlineKeyboardMarkup(
